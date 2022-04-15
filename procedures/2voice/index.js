@@ -74,7 +74,7 @@ timeline.push(social_instructions)
 
 var survey1 = {
     type: 'survey-html-form',
-    preamble: '<p><br>We would like you to answer the following questions. <br>If you\'d rather not answer, select "Prefer not to say" or type "NA".</p><br>',
+    preamble: '<p><br>कृपया अग्रांकित प्रश्नों के उत्तर दें।</p><br>',
     html: '<ol class="input-wrapper">' +
         hand +
         gender +
@@ -96,13 +96,14 @@ var survey1 = {
 // };
 
 timeline.push(survey1)
-// timeline.push(survey2)
 
 // Get all media objects in one array
 // let preload_array = preload_exp;
 // for (let i = 0; i < preload_audiocheck.length; i++) {
 //     preload_array.push(preload_audiocheck[i]);
 // }
+
+
 
 jsPsych.init({
     // preload_audio: preload_array, 
