@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Speech memory study</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://proliferate.alps.science/static/js/proliferate.js" type="text/javascript"></script>
+    <script src="../../jspsych-6.2.0/jspsych.js"></script>
+    <script src="../../jspsych-6.2.0/plugins/jspsych-audio-keyboard-response.js"></script>
+    <script src="../../jspsych-6.2.0/plugins/jspsych-html-keyboard-response.js"></script>
+    <script src="../../jspsych-6.2.0/plugins/jspsych-html-button-response.js"></script>
+    <script src="../../jspsych-6.2.0/plugins/jspsych-survey-multi-choice.js"></script>
+    <script src="../../jspsych-6.2.0/plugins/jspsych-survey-text.js"></script>
+    <script src="../../jspsych-6.2.0/plugins/jspsych-survey-html-form.js"></script>
+    <link href="../../jspsych-6.2.0/css/jspsych.css" rel="stylesheet" type="text/css">
+    <link href="../index.css" rel="stylesheet" type="text/css">
+    <link href="../socialstuff.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8" />
+</head>
+
+<body class="main-body"></body>
+<script>
+    // Choose button side
+    let button_order = "NULL"
+    if (Math.floor(Math.random() * 2)) {
+        button_order = "NEW_OLD";
+    } else {
+        button_order = "OLD_NEW";
+    }
+</script>
+<script src="../make_utils.js"></script>
+<script>
+    // Some global variables
+    let talker_ids = ['HF01'];
+    let identical_tokens = true;
+</script>
+<script src="../socialstuff.js"></script>
+<script src="../../csvs/word_ids_1.js"></script>
+
+<script>
+    word_ids = shuffle(word_ids);
+</script>
+<script src="make_stims.js"></script>
+<!-- <script src="../practice_feedback.js"></script> -->
+<script src="index.js"></script>
+</html>

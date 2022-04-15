@@ -1,0 +1,143 @@
+.irb {
+    border: 3px black solid;
+    width: 60%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+#jspsych-html-button-response-stimulus {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+#jspsych-html-keyboard-response-stimulus {
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 30px; */
+}
+
+.gen_ins {
+    border: 3px black solid;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.spec_ins {
+    border: 3px black solid;
+    border-radius: 10px;
+    padding: 30px;
+    width: 60%
+}
+
+.logo {
+    width: 250px;
+}
+
+.main-body {
+    background-color: rgb(253, 253, 253);
+}
+
+.big-container {
+    border: 3px black solid;
+    height: 400px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+.wrong-container {
+    border: 3px rgb(255, 20, 20) solid;
+    height: 400px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+.wrong-text {
+    color: rgb(255, 20, 20);
+    font-size: 30px;
+}
+
+.right-container {
+    border: 3px rgb(1, 189, 17) solid;
+    color: rgb(1, 189, 17);
+    height: 400px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+.right-text {
+    color: rgb(1, 189, 17);
+    font-size: 30px;
+}
+
+.yes-no {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;  
+    margin-bottom: 25px;  
+}
+
+.option-container {
+    border: 3px black solid;
+    height: 150px;
+    width: 165px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.between-container {
+    border: 3px rgb(253, 253, 253) solid;
+    color:rgb(253, 253, 253);
+    height: 150px;
+    width: 165px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+
+.exposure-prompt {
+    font-size:20px;
+}
+
+.pre-test-container {
+    width: 650px;
+    padding: 25px;
+    border: 3px black solid;
+    border-radius: 10px;
+}
+
+.quietest-container {
+    border: 3px black solid;
+    height: 380px;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+.quietest {
+    font-size: 25px;
+}
+
+.quietest_option {
+    border: 3px black solid;
+    height: 130px;
+    width: 140px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
