@@ -81,6 +81,7 @@ var survey1 = {
         age +
         region +
         language +
+        english + 
         listen +
         fair_price +
         '</ol>'

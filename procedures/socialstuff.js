@@ -65,11 +65,12 @@ var hand_options = [
 ]
 var hand = make_question("क्या आप मुख्य रूप से बाएं हाथ या दाएं हाथ से काम करते हैं?", hand_options.join(''))
 
-var assess_options = [
-    html_input({ type: 'radio', name: 'assess', id: 'yes', label: 'Yes' }),
-    html_input({ type: 'radio', name: 'assess', id: 'no', label: 'No' }),
-    html_input({ type: 'radio', name: 'assess', id: 'confused', label: 'I was confused' })
+var english_options = [
+    html_input({ type: 'radio', name: 'english', id: 'yes', label: 'हां' }),
+    html_input({ type: 'radio', name: 'english', id: 'no', label: 'नहीं' }),
+    html_input({ type: 'radio', name: 'english', id: 'no-answer', label: 'चुप रहना पसंद करूंगा' })
 ]
+var english = make_question("क्या आप अंग्रेज़ी बोलते हैं?", english_options.join(''));
 
 var audio_options = [
     html_input({ type: 'radio', name: 'audio', id: 'computer-speaker', label: 'कंप्यूटर स्पीकर'}),
