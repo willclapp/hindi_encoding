@@ -26,6 +26,6 @@ def make_obj(input_csv, output):
     out_file.close()
     print("file written")
 
-csv_path = "/Users/willclapp/Desktop/JML/Experiments/csvs/best_recordings_1.csv"
-output_path = "/Users/willclapp/Desktop/JML/Experiments/csvs/word_ids_1.js"
+csv_path = "/Users/willclapp/Desktop/Hindi/Experiments/csvs/best_recordings_1.csv"
+output_path = "/Users/willclapp/Desktop/Hindi/Experiments/csvs/word_ids_1.js"
 make_obj(csv_path, output_path)
