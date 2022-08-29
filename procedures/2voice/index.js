@@ -42,7 +42,7 @@ for (i = 0; i < num_practice * 2; i++) {
 
 let end_practice = {
     type: 'html-keyboard-response',
-    stimulus: `<div class="spec_ins"><p>अभ्यास का दौर अब पूरा हो गया है, और शेष प्रयोग के लिए, आपको अपने जवाबों पर प्रतिक्रिया प्राप्त नहीं होगी।<br><br>जब आप आगे बढ़ने के लिए तैयार हों, तो स्पेस बार दबाएं</p></div>`,
+    stimulus: `<div class="spec_ins"><p>अभ्यास का दौर अब पूरा हो गया है, और शेष प्रयोग के लिए, आपको अपने जवाबों पर प्रतिक्रिया प्राप्त नहीं होगी।<br><br>जब आप आगे बढ़ने के लिए तैयार हों, तो स्पेस बार दबाएं।</p></div>`,
     choices: ['space'],
     on_start: function() {
         jsPsych.setProgressBar(0);
@@ -103,7 +103,6 @@ timeline.push(survey1)
 // for (let i = 0; i < preload_audiocheck.length; i++) {
 //     preload_array.push(preload_audiocheck[i]);
 // }
-
 
 
 jsPsych.init({
