@@ -1,5 +1,5 @@
 let feedback_trial = {
-    type: 'html-keyboard-response',
+    type: jsPsychHtmlKeyboardResponse,
     trial_duration: 3000, 
     response_ends_trial: false,
     stimulus: function() {
@@ -21,14 +21,14 @@ let feedback_trial = {
 
 
 let inter_trial = {
-    type: 'html-keyboard-response',
+    type: jsPsychHtmlKeyboardResponse,
     trial_duration: 1000,
     response_ends_trial: false,
     stimulus: function() {
         if (button_order == "NEW_OLD") {
-                return '<div class="big-container"><div class="yes-no"><div class="between-container"><p>नया</p><p>Press D</p></div><div class="between-container"><p>पुराना</p><p>Press K</p></div></div></div>';
+                return '<div class="big-container"><div class="yes-no"><div class="between-container"><p>नया</p><p>D</p></div><div class="between-container"><p>पुराना</p><p>K</p></div></div></div>';
             } else {
-                return '<div class="big-container"><div class="yes-no"><div class="between-container"><p>पुराना</p><p>Press D</p></div><div class="between-container"><p>नया</p><p>Press K</p></div></div></div>';
+                return '<div class="big-container"><div class="yes-no"><div class="between-container"><p>पुराना</p><p>D</p></div><div class="between-container"><p>नया</p><p>K</p></div></div></div>';
             }
         }
 }

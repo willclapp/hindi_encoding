@@ -2,3 +2,4 @@ proliferate-client/*
 *.config
 *.exps
 data/*
+old_version/*

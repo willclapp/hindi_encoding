@@ -1,6 +1,6 @@
-let num_practice = 8;
-let num_memload = 16;
-let num_exp = 140;
+let num_practice = 1;
+let num_memload = 1;
+let num_exp = 1;
 
 let audio_data = {
     ID: 0,
@@ -21,7 +21,7 @@ let audio_data = {
 
 let audio_temp = {
     stimulus: 'UNKNOWN', 
-    type: 'audio-keyboard-response', 
+    type: jsPsychAudioKeyboardResponse, 
     prompt: 'UNKNOWN', 
     trial_ends_after_audio: true, 
     post_trial_gap: 0, 
@@ -47,42 +47,32 @@ let response_data = {
 }
 
 let response_temp = {
-    type: 'html-keyboard-response', 
+    type: jsPsychHtmlKeyboardResponse, 
     choices: ['d', 'k'], 
     stimulus: 'UNKNOWN', 
     trial_duration: 4000, 
     post_trial_gap: 0, 
     data: {},
     on_finish: function(data) {
-        // uncomment next line to see the result of each trial
-        // console.log(data.key_press);
-        
-        // if (data.Phase == 'practice') {
-        //         jsPsych.setProgressBar(data.Order / (num_practice * 2));
-        // } else if (data.Phase == 'memload') {
-        //         jsPsych.setProgressBar(data.Order / ((num_memload + num_exp) * 2));
-        // } else {
-        //         jsPsych.setProgressBar((data.Order + num_memload + 4) / ((num_memload + num_exp) * 2));
-        // }
         let correct_response;
         if (data.Buttons == 'NEW_OLD') {
             if (data.Presentation == 'NEW') {
-                correct_response = 68;
+                correct_response = 'd';
             } else {
-                correct_response = 75;
+                correct_response = 'k';
             }
         } else if (data.Buttons == 'OLD_NEW') {
             if (data.Presentation == 'NEW') {
-                correct_response = 75;
+                correct_response = 'k';
             } else {
-                correct_response = 68;
+                correct_response = 'd';
             }
         }
-        if (data.key_press == null) {
+        if (data.response == null) {
             data.correct = false;
             data.case = 'NO_RESPONSE'
         } else {
-            if(correct_response == data.key_press) {
+            if(correct_response == data.response) {
                 data.correct = true;
             } else {
                 data.correct = false; 
