@@ -1,3 +1,4 @@
 proliferate-client/*
 *.config
 *.exps
+data/*
