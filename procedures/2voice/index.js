@@ -78,7 +78,7 @@ let social_instructions = {
     post_trial_gap: 250
 }
 
-// timeline.push(social_instructions)
+timeline.push(social_instructions)
 
 var survey = {
     type: jsPsychSurveyHtmlForm,
@@ -95,7 +95,7 @@ var survey = {
         '</ol>'
 };
 
-// timeline.push(survey)
+timeline.push(survey)
 
 var jsPsych = initJsPsych({
     on_finish: function() {
