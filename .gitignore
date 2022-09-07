@@ -3,3 +3,4 @@ proliferate-client/*
 *.exps
 data/*
 old_version/*
+mturk/*

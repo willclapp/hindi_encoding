@@ -98,8 +98,10 @@ var survey = {
 timeline.push(survey)
 
 var jsPsych = initJsPsych({
+    show_progress_bar: true,
     on_finish: function() {
-      jsPsych.data.displayData();
+    //   jsPsych.data.displayData();
+      turk.submit(jsPsych.data.get())
     }
   });
 
