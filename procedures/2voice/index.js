@@ -101,8 +101,8 @@ var jsPsych = initJsPsych({
     show_progress_bar: true,
     on_finish: function() {
     //   jsPsych.data.displayData();
-      turk.submit(data.values())
-      proliferate.submit({"trials": data.values()});
+        jsPsych.turk.submitToTurk(data)
+        proliferate.submit({"trials": data.values()});
     }
   });
 

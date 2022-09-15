@@ -1,4 +1,4 @@
-proliferate-client/*
+proliferate-client
 *.config
 *.exps
 data/*
