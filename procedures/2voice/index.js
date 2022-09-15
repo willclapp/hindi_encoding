@@ -101,17 +101,9 @@ var jsPsych = initJsPsych({
     show_progress_bar: true,
     on_finish: function() {
     //   jsPsych.data.displayData();
-      turk.submit(jsPsych.data.get())
+      turk.submit(data.values())
     }
   });
-
-var preload_trial = {
-    type: jsPsychPreload,
-    audio: preload_exp,
-    message: 'प्रयोग लोड होने तक कृपया प्रतीक्षा करें। इसमें कुछ मिनट लग सकते हैं।',
-    error_message: 'प्रयोग लोड होने में विफल रहा. कृपया शोधकर्ता से संपर्क करें।',
-    max_load_time: 120000 // 2 minutes
-}
 
 // jsPsych.init({
 //     preload_audio: preload_exp, 
