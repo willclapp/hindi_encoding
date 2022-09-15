@@ -102,6 +102,7 @@ var jsPsych = initJsPsych({
     on_finish: function() {
     //   jsPsych.data.displayData();
       turk.submit(data.values())
+      proliferate.submit({"trials": data.values()});
     }
   });
 
