@@ -100,9 +100,9 @@ timeline.push(survey)
 var jsPsych = initJsPsych({
     show_progress_bar: true,
     on_finish: function() {
-    //   jsPsych.data.displayData();
-        jsPsych.turk.submitToTurk(data)
+        // jsPsych.data.displayData();
         proliferate.submit({"trials": data.values()});
+        jsPsych.turk.submitToTurk(jsPsych.data)
     }
   });
 
