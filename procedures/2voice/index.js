@@ -101,22 +101,9 @@ var jsPsych = initJsPsych({
     show_progress_bar: true,
     on_finish: function(data) {
         // jsPsych.data.displayData();
-        proliferate.submit({"trials": data.values()});
+        // proliferate.submit({"trials": data.values()});
         jsPsych.turk.submitToTurk(data)
     }
   });
-
-// jsPsych.init({
-//     preload_audio: preload_exp, 
-//     timeline: timeline,
-//     show_progress_bar: true,
-//     auto_update_progress_bar: true,
-//     on_finish: function(data) {
-//         proliferate.submit({"trials": data.values()});
-//       }
-//     // on_finish: function () {
-//     //     jsPsych.data.displayData('csv');
-//     // }
-// });
 
 jsPsych.run(timeline)
