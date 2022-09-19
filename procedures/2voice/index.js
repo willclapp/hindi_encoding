@@ -100,9 +100,17 @@ timeline.push(survey)
 var jsPsych = initJsPsych({
     show_progress_bar: true,
     on_finish: function(data) {
+        var data_obj = {
+            "trials" : data,
+            "catch_trials" : {},
+            "system" : {},
+            "condition" : "",
+            "subject_information" : {},
+            "time_in_minutes" : 0
+        }
         // jsPsych.data.displayData();
         // proliferate.submit({"trials": data.values()});
-        setTimeout(function() {turk.submit(data);}, 1000);
+        setTimeout(function() {turk.submit(data_obj);}, 1000);
         // jsPsych.turk.submitToTurk(data)
     }
   });
