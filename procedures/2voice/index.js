@@ -106,7 +106,7 @@ var jsPsych = initJsPsych({
             "system" : {},
             "condition" : "",
             "subject_information" : {},
-            "time_in_minutes" : 0
+            "time_in_minutes" : {}
         }
         // jsPsych.data.displayData();
         // proliferate.submit({"trials": data.values()});
