@@ -101,12 +101,12 @@ var jsPsych = initJsPsych({
     show_progress_bar: true,
     on_finish: function(data) {
         var data_obj = {
-            "trials" : data,
-            "catch_trials" : {},
-            "system" : {},
-            "condition" : "",
-            "subject_information" : {},
-            "time_in_minutes" : {}
+            "trials" : data
+            // "catch_trials" : {},
+            // "system" : {},
+            // "condition" : "",
+            // "subject_information" : {},
+            // "time_in_minutes" : {}
         }
         // jsPsych.data.displayData();
         // proliferate.submit({"trials": data.values()});
