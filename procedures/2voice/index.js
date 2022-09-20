@@ -108,6 +108,7 @@ var jsPsych = initJsPsych({
             "subject_information" : {},
             "time_in_minutes" : {}
         }
+        console.log(data_obj)
         // jsPsych.data.displayData();
         // proliferate.submit({"trials": data.values()});
         setTimeout(function() {turk.submit(data_obj);}, 1000);
