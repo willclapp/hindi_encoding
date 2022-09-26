@@ -57,7 +57,7 @@ let end_practice = {
     choices: [' ']
 };
 
-timeline.push(end_practice);
+// timeline.push(end_practice);
 
 for (i = 0; i < num_memload * 2; i++) {
     timeline.push(memload_audio_objects[i]);
@@ -78,7 +78,7 @@ let social_instructions = {
     post_trial_gap: 250
 }
 
-timeline.push(social_instructions)
+// timeline.push(social_instructions)
 
 var survey = {
     type: jsPsychSurveyHtmlForm,
@@ -95,7 +95,7 @@ var survey = {
         '</ol>'
 };
 
-timeline.push(survey)
+// timeline.push(survey)
 
 var jsPsych = initJsPsych({
     show_progress_bar: true,
