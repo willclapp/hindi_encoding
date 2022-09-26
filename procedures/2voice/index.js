@@ -101,7 +101,7 @@ var jsPsych = initJsPsych({
     show_progress_bar: true,
     on_finish: function(data) {
         var data_obj = {
-            "trials" : data
+            "trials" : data,
             "catch_trials" : {},
             "system" : {},
             "condition" : "",
