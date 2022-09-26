@@ -27,7 +27,7 @@ let general_instructions = {
     choices: [' ']
 };
 
-// timeline.push(general_instructions);
+timeline.push(general_instructions);
 
 
 let instructions = {
@@ -42,7 +42,7 @@ let instructions = {
     choices: [' ']
 };
 
-// timeline.push(instructions);
+timeline.push(instructions);
 
 for (i = 0; i < num_practice * 2; i++) {
     timeline.push(practice_audio_objects[i]);
@@ -57,19 +57,19 @@ let end_practice = {
     choices: [' ']
 };
 
-// timeline.push(end_practice);
+timeline.push(end_practice);
 
-// for (i = 0; i < num_memload * 2; i++) {
-//     timeline.push(memload_audio_objects[i]);
-//     timeline.push(memload_response_objects[i]);
-//     timeline.push(inter_trial);
-// }
+for (i = 0; i < num_memload * 2; i++) {
+    timeline.push(memload_audio_objects[i]);
+    timeline.push(memload_response_objects[i]);
+    timeline.push(inter_trial);
+}
 
-// for (i = 0; i < num_exp * 2; i++) {
-//     timeline.push(exp_audio_objects[i]);
-//     timeline.push(exp_response_objects[i]);
-//     timeline.push(inter_trial);
-// }
+for (i = 0; i < num_exp * 2; i++) {
+    timeline.push(exp_audio_objects[i]);
+    timeline.push(exp_response_objects[i]);
+    timeline.push(inter_trial);
+}
 
 let social_instructions = {
     type: jsPsychHtmlKeyboardResponse,
@@ -78,7 +78,7 @@ let social_instructions = {
     post_trial_gap: 250
 }
 
-// timeline.push(social_instructions)
+timeline.push(social_instructions)
 
 var survey = {
     type: jsPsychSurveyHtmlForm,
@@ -95,7 +95,7 @@ var survey = {
         '</ol>'
 };
 
-// timeline.push(survey)
+timeline.push(survey)
 
 var jsPsych = initJsPsych({
     show_progress_bar: true,
@@ -109,10 +109,7 @@ var jsPsych = initJsPsych({
             "time_in_minutes" : {}
         }
         console.log(data_obj)
-        // jsPsych.data.displayData();
-        // proliferate.submit({"trials": data.values()});
         setTimeout(function() {turk.submit(data_obj);}, 1000);
-        // jsPsych.turk.submitToTurk(data)
     }
   });
 
