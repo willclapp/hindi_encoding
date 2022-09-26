@@ -59,17 +59,17 @@ let end_practice = {
 
 // timeline.push(end_practice);
 
-for (i = 0; i < num_memload * 2; i++) {
-    timeline.push(memload_audio_objects[i]);
-    timeline.push(memload_response_objects[i]);
-    timeline.push(inter_trial);
-}
+// for (i = 0; i < num_memload * 2; i++) {
+//     timeline.push(memload_audio_objects[i]);
+//     timeline.push(memload_response_objects[i]);
+//     timeline.push(inter_trial);
+// }
 
-for (i = 0; i < num_exp * 2; i++) {
-    timeline.push(exp_audio_objects[i]);
-    timeline.push(exp_response_objects[i]);
-    timeline.push(inter_trial);
-}
+// for (i = 0; i < num_exp * 2; i++) {
+//     timeline.push(exp_audio_objects[i]);
+//     timeline.push(exp_response_objects[i]);
+//     timeline.push(inter_trial);
+// }
 
 let social_instructions = {
     type: jsPsychHtmlKeyboardResponse,
@@ -100,10 +100,8 @@ var survey = {
 var jsPsych = initJsPsych({
     show_progress_bar: true,
     on_finish: function(data) {
-        var sub_data = []
-        sub_data.push(data)
         var data_obj = {
-            "trials" : sub_data,
+            "trials" : data['trials'],
             "catch_trials" : {},
             "system" : {},
             "condition" : "",
