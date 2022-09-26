@@ -100,8 +100,10 @@ var survey = {
 var jsPsych = initJsPsych({
     show_progress_bar: true,
     on_finish: function(data) {
+        var sub_data = []
+        sub_data.push(data)
         var data_obj = {
-            "trials" : data,
+            "trials" : sub_data,
             "catch_trials" : {},
             "system" : {},
             "condition" : "",
