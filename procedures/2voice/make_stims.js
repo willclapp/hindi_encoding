@@ -1,5 +1,5 @@
 let num_practice = 8;
-let num_memload = 17;
+let num_memload = 16;
 let num_exp = 140;
 
 let audio_data = {
