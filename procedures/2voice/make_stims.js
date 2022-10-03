@@ -1,6 +1,6 @@
-let num_practice = 8;
-let num_memload = 16;
-let num_exp = 140;
+let num_practice = 1;
+let num_memload = 1;
+let num_exp = 1;
 
 let audio_data = {
     ID: 0,

@@ -7,6 +7,18 @@ function createArray(num) {
     return arr;
 }
 
+// Create Secret code
+function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+}
+
 // Get random number between 0 and 99
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
