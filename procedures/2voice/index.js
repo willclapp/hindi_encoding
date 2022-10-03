@@ -11,7 +11,7 @@ var preload_trial = {
     error_message: 'प्रयोग लोड होने में विफल रहा. कृपया शोधकर्ता से संपर्क करें।',
     max_load_time: 120000 // 2 minutes
 };
-// timeline.push(preload_trial)
+timeline.push(preload_trial)
 
 let irb = {
     type: jsPsychHtmlButtonResponse,
@@ -19,7 +19,7 @@ let irb = {
     choices: ['Continue']
 };
 
-// timeline.push(irb);
+timeline.push(irb);
 
 let general_instructions = {
     type: jsPsychHtmlKeyboardResponse,
@@ -27,7 +27,7 @@ let general_instructions = {
     choices: [' ']
 };
 
-// timeline.push(general_instructions);
+timeline.push(general_instructions);
 
 
 let instructions = {
@@ -42,13 +42,13 @@ let instructions = {
     choices: [' ']
 };
 
-// timeline.push(instructions);
+timeline.push(instructions);
 
-// for (i = 0; i < num_practice * 2; i++) {
-//     timeline.push(practice_audio_objects[i]);
-//     timeline.push(practice_response_objects[i]);
-//     timeline.push(feedback_trial);
-// }
+for (i = 0; i < num_practice * 2; i++) {
+    timeline.push(practice_audio_objects[i]);
+    timeline.push(practice_response_objects[i]);
+    timeline.push(feedback_trial);
+}
 
 
 let end_practice = {
@@ -57,19 +57,19 @@ let end_practice = {
     choices: [' ']
 };
 
-// timeline.push(end_practice);
+timeline.push(end_practice);
 
-// for (i = 0; i < num_memload * 2; i++) {
-//     timeline.push(memload_audio_objects[i]);
-//     timeline.push(memload_response_objects[i]);
-//     timeline.push(inter_trial);
-// }
+for (i = 0; i < num_memload * 2; i++) {
+    timeline.push(memload_audio_objects[i]);
+    timeline.push(memload_response_objects[i]);
+    timeline.push(inter_trial);
+}
 
-// for (i = 0; i < num_exp * 2; i++) {
-//     timeline.push(exp_audio_objects[i]);
-//     timeline.push(exp_response_objects[i]);
-//     timeline.push(inter_trial);
-// }
+for (i = 0; i < num_exp * 2; i++) {
+    timeline.push(exp_audio_objects[i]);
+    timeline.push(exp_response_objects[i]);
+    timeline.push(inter_trial);
+}
 
 let social_instructions = {
     type: jsPsychHtmlKeyboardResponse,
@@ -78,7 +78,7 @@ let social_instructions = {
     post_trial_gap: 250
 }
 
-// timeline.push(social_instructions)
+timeline.push(social_instructions)
 
 var survey = {
     type: jsPsychSurveyHtmlForm,
@@ -95,15 +95,10 @@ var survey = {
         '</ol>'
 };
 
-// timeline.push(survey)
+timeline.push(survey)
 
 let code = {
     type: jsPsychHtmlButtonResponse,
-    on_start: function(code, stimulus_layout) {
-        secret_id = makeid(8)
-        stimulus_layout += `<div class="gen_ins"><p>` + secret_id + `</p></div>`
-    },
-    // stimulus: stimulus_layout,
     stimulus: function() {
         secret_id = makeid(8);
         stim = `<div class="gen_ins"><p>प्रयोग पूरा करने के लिए धन्यवाद।<br><br>To complete the HIT, copy the completion code below, and click the button to send the data. Do not exit this page before clicking the button or the data will not be recorded and you cannot be compensated.<br><br>After sending the data, go back to MTurk and paste the code in the provided box.<br><br>Completion code:<br><b> `
