@@ -97,33 +97,18 @@ var survey = {
 
 timeline.push(survey)
 
-// let code = {
-//     type: jsPsychHtmlButtonResponse,
-//     stimulus: function() {
-//         secret_id = makeid(8);
-//         stim = `<div class="gen_ins"><p>प्रयोग पूरा करने के लिए धन्यवाद।<br><br>To complete the HIT, copy the completion code below, and click the button to send the data. Do not exit this page before clicking the button or the data will not be recorded and you cannot be compensated.<br><br>After sending the data, go back to MTurk and paste the code in the provided box.<br><br>Completion code:<br><b> `
-//         stim += secret_id
-//         stim += `</b></p></div>`
-//         return stim
-//     },
-//     on_close: function(data) {
-//         var data_obj = {
-//             "trials" : data['trials']
-//         }
-//         setTimeout(function() {turk.submit(data_obj);}, 1000);
-//     },
-//     choices: ['Click to end HIT']
-// };
-
-// timeline.push(code)
-
 var jsPsych = initJsPsych({
     show_progress_bar: true,
     on_finish: function(data) {
-        console.log(data)
         var data_obj = {
-            "trials" : data['trials']
+            "trials" : data['trials'],
+            "catch_trials" : {},
+            "system" : {},
+            "condition" : "",
+            "subject_information" : {},
+            "time_in_minutes" : {}
         }
+        console.log(data_obj)
         setTimeout(function() {turk.submit(data_obj);}, 1000);
     }
   });
