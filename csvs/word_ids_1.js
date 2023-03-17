@@ -147,8 +147,7 @@ let word_ids = [
 	{id: 144, word: "YAHTN", list: [2, 4, 2, 3, 2, 2]},
 	{id: 145, word: "YUWKT", list: [2, 4, 2, 3, 2, 2]},
 	{id: 146, word: "JIYD", list: [2, 4, 2, 3, 2, 2]},
-	{id: 147, word: "JVAAR", list: [2, 4, 2, 3, 2, 2]},
-	{id: 148, word: "KAAstH", list: [2, 4, 2, 3, 2, 2]},
-	{id: 149, word: "TIYKsn", list: [2, 4, 2, 3, 2, 2]},
-	{id: 150, word: "KHINN", list: [2, 4, 2, 3, 2, 2]}
+	{id: 147, word: "KAAstH", list: [2, 4, 2, 3, 2, 2]},
+	{id: 148, word: "TIYKsn", list: [2, 4, 2, 3, 2, 2]},
+	{id: 149, word: "KHINN", list: [2, 4, 2, 3, 2, 2]}
 ]
