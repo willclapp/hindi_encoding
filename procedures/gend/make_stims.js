@@ -20,6 +20,8 @@ let audio_data = {
     talker_set: 'UNKNOWN'
 }
 
+console.log(audio_data)
+
 let audio_temp = {
     stimulus: 'UNKNOWN', 
     type: jsPsychAudioKeyboardResponse, 
@@ -44,6 +46,7 @@ let response_data = {
     Recording: 0, 
     token_repeated: true,
     case: 'UNKNOWN',
+    condition: cond,
     talker_set: 'UNKNOWN'
 }
 
