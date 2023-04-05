@@ -38,9 +38,27 @@
 <script src="../make_utils.js"></script>
 <script>
     // Some global variables
-    let talker_ids = ['HF01', 'HF02', 'HM02', 'HM04'];
-    talker_ids = shuffle(shuffle(talker_ids)).slice(0,2)
-    // let talker_ids = ['HF02', 'HM01']
+    // Determine gender condition, determine specific talkers
+    let f_ids = ['HF01', 'HF02', 'HF03'];
+    let m_ids = ['HM02', 'HM04', 'HM05']
+    let talker_ids = []
+    let condition_code = getRandomInt(4)
+    let cond = ""
+    if (condition_code < 2) {
+        cond = "FM"
+        talker_ids.push(f_ids[getRandomInt(f_ids.length)])
+        talker_ids.push(m_ids[getRandomInt(m_ids.length)])
+    } else if (condition_code == 2) {
+        cond = "FF"
+        f_ids = shuffle(f_ids)
+        talker_ids.push(f_ids[0])
+        talker_ids.push(f_ids[1])
+    } else {
+        cond = "MM"
+        m_ids = shuffle(m_ids)
+        talker_ids.push(m_ids[0])
+        talker_ids.push(m_ids[1])
+    }
     let identical_tokens = true;
 </script>
 <script src="../socialstuff.js"></script>

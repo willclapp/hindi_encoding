@@ -1,6 +1,6 @@
 let num_practice = 4;
 let num_memload = 12;
-let num_exp = 134;
+let num_exp = 133;
 
 let audio_data = {
     ID: 0,
@@ -16,6 +16,7 @@ let audio_data = {
     Presentation: 'UNKNOWN', 
     Recording: 0, 
     token_repeated: true,
+    condition: cond,
     talker_set: 'UNKNOWN'
 }
 
