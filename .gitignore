@@ -4,3 +4,4 @@ proliferate-client
 data/*
 old_version/*
 mturk/*
+audio_backup/*
