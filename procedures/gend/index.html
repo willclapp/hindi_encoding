@@ -43,6 +43,7 @@
     let m_ids = ['HM02', 'HM04', 'HM05']
     let talker_ids = []
     let condition_code = getRandomInt(4)
+    condition_code = "1"
     let cond = ""
     if (condition_code < 2) {
         cond = "FM"
@@ -59,6 +60,7 @@
         talker_ids.push(m_ids[0])
         talker_ids.push(m_ids[1])
     }
+    console.log(talker_ids)
     let identical_tokens = true;
 </script>
 <script src="../socialstuff.js"></script>
